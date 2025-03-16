@@ -1,0 +1,104 @@
+<mxfile host="65bd71144e">
+    <diagram id="I50oaBL43x9u5S8VZXw2" name="Page-1">
+        <mxGraphModel dx="640" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="1" vertex="1">
+                    <mxGeometry x="20" y="130" width="580" height="621" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry width="580" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Cas" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="3" vertex="1">
+                    <mxGeometry width="120" height="61" as="geometry">
+                        <mxRectangle width="120" height="61" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Enregistrer un retour" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="3" vertex="1">
+                    <mxGeometry x="120" width="460" height="61" as="geometry">
+                        <mxRectangle width="460" height="61" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="61" width="580" height="63" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Description" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="6" vertex="1">
+                    <mxGeometry width="120" height="63" as="geometry">
+                        <mxRectangle width="120" height="63" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Permet au bibliothécaire d&#39;enregistrer le retour d&#39;un livre emprunté par un lecteur." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="6" vertex="1">
+                    <mxGeometry x="120" width="460" height="63" as="geometry">
+                        <mxRectangle width="460" height="63" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="124" width="580" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Acteur Principal" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="9" vertex="1">
+                    <mxGeometry width="120" height="61" as="geometry">
+                        <mxRectangle width="120" height="61" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Bibliothécaire" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="9" vertex="1">
+                    <mxGeometry x="120" width="460" height="61" as="geometry">
+                        <mxRectangle width="460" height="61" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="185" width="580" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Pré-condition" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="12" vertex="1">
+                    <mxGeometry width="120" height="60" as="geometry">
+                        <mxRectangle width="120" height="60" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Le bibliothécaire doit être authentifié.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Le livre doit être emprunté par un lecteur.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="12" vertex="1">
+                    <mxGeometry x="120" width="460" height="60" as="geometry">
+                        <mxRectangle width="460" height="60" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="245" width="580" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Résultats" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="15" vertex="1">
+                    <mxGeometry width="120" height="75" as="geometry">
+                        <mxRectangle width="120" height="75" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Le livre est marqué comme disponible dans le système.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- L&#39;emprunt est clôturé.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-Si le retour est en retard, une amende est appliquée et notifiée au lecteur.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="15" vertex="1">
+                    <mxGeometry x="120" width="460" height="75" as="geometry">
+                        <mxRectangle width="460" height="75" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="320" width="580" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Scénario nominal" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="18" vertex="1">
+                    <mxGeometry width="120" height="140" as="geometry">
+                        <mxRectangle width="120" height="140" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1. Le bibliothécaire sélectionne l&#39;option &quot;Enregistrer un retour&quot;.&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Le système affiche la liste des livres empruntés.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3. Le bibliothécaire sélectionne le livre retourné.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4. Le système vérifie si le retour est en retard.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. Si le retour est en retard, une amende est appliquée et notifiée au lecteur.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;6. Le livre est marqué comme disponible dans le système.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;7. L&#39;emprunt est clôturé.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="18" vertex="1">
+                    <mxGeometry x="120" width="460" height="140" as="geometry">
+                        <mxRectangle width="460" height="140" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;spacingLeft=10;whiteSpace=wrap;html=1;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="2" vertex="1">
+                    <mxGeometry y="460" width="580" height="161" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Scénario alternatifs" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="21" vertex="1">
+                    <mxGeometry width="120" height="161" as="geometry">
+                        <mxRectangle width="120" height="161" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4.a Le retour est en retard:&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;gt; Le système calcule l&#39;amende en fonction de la durée du retard.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5.a Le livre est endommagé:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;gt; Le bibliothécaire enregistre l&#39;état du livre (endommagé) et applique une pénalité supplémentaire si nécessaire.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4.a Le livre était réserver par un autre lecteur :&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;gt; Le système notifie le prochain lecteur dans la file d&#39;attente que le livre est disponible.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;spacingLeft=10;labelBorderColor=none;textShadow=0;fontColor=light-dark(#000000,#FFFFFF);" parent="21" vertex="1">
+                    <mxGeometry x="120" width="460" height="161" as="geometry">
+                        <mxRectangle width="460" height="161" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
