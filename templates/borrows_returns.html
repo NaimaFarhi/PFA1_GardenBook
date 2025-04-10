@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <title>Borrowings & Returns</title>
+</head>
+
+<body>
+  <!-- START NAVIGATION BAR -->
+  <header class="m-4 text-white">
+    <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
+      <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
+        <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="assets/brand/_logo-nobg.png" class="bi me-2" width="80" height="80" role="img"
+            aria-label="GardenBook">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item"><a href="home.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-house-door mx-2"></i>Home</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-clipboard2-data mx-2"></i>Dashboard</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="books.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Books</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="books.html">All Books</a></li>
+              <li><a class="dropdown-item" href="addBook.html">Add a book</a></li>
+              <li><a class="dropdown-item" href="borrows_returns.html">Borrowings & Returns</a></li>
+              <li><a class="dropdown-item" href="stock.html">Stock</a></li>
+              <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="users.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Users</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="users.html">All Users</a></li>
+              <li><a class="dropdown-item" href="addUser.html">Add a User</a></li>
+              <li><a class="dropdown-item" href="former_users.html">Former users record</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="settings.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-gear mx-2"></i>Settings</a></li>
+        </ul>
+
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-brown text-light">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END NAVIGATION BAR -->
+
+  <main>
+    <!-- START DISPLAY BOOK BORROWINGS -->
+  <div class="container-fluid row m-2">
+    <!-- START SEARCH BAR SECTION -->
+    <div class="col-md-3 p-4">
+      
+      <!-- Book Title Search -->
+      <div class="row my-2">
+        <p class="fs-5">Book Title</p>
+        <input type="search" class="form-control" id="searchTitle" placeholder="Enter Book Title">
+      </div>
+
+      <!-- Borrowed On -->
+      <div class="row my-2">
+        <p class="fs-5">Borrowed On</p>
+        <input type="date" class="form-control" id="searchBorrowedOn">
+      </div>
+
+      <!-- Due Date -->
+      <div class="row my-2">
+        <p class="fs-5">Due Date</p>
+        <input type="date" class="form-control" id="searchDueDate">
+      </div>
+
+      <!-- Returned On -->
+      <div class="row my-2">
+        <p class="fs-5">Returned On</p>
+        <input type="date" class="form-control" id="searchReturnedOn">
+      </div>
+    </div>
+    <!-- END SEARCH BAR SECTION -->
+
+    <!-- START TABLE SECTION -->
+    <div class="col p-2">
+      <table class="table table-bordered align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Book Title</th>
+            <th>Borrowed On</th>
+            <th>Due Date</th>
+            <th>Returned On</th>
+            <th>Fine (DH)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="book-details.html" class="text-dark text-decoration-none">The Great Gatsby</a></td>
+            <td>2024-04-01</td>
+            <td>2024-04-15</td>
+            <td>2024-04-16</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td><a href="book-details.html" class="text-dark text-decoration-none">1984</a></td>
+            <td>2024-03-25</td>
+            <td>2024-04-08</td>
+            <td>2024-04-08</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td><a href="book-details.html" class="text-dark text-decoration-none">To Kill a Mockingbird</a></td>
+            <td>2024-03-20</td>
+            <td>2024-04-03</td>
+            <td>2024-04-05</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- END TABLE SECTION -->
+  </div>
+  <!-- END DISPLAY BOOK BORROWINGS -->
+  </main>
+
+  <footer class="bg-green text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>We provide the best book management system to keep your library organized and efficient.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-3 border-light">
+
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 GardenBook. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const titleInput = document.getElementById("searchTitle");
+    const borrowedOnInput = document.getElementById("searchBorrowedOn");
+    const dueDateInput = document.getElementById("searchDueDate");
+    const returnedOnInput = document.getElementById("searchReturnedOn");
+
+    const tableRows = document.querySelectorAll("tbody tr");
+
+    function filterBorrowings() {
+      const titleValue = titleInput.value.toLowerCase();
+      const borrowedValue = borrowedOnInput.value;
+      const dueValue = dueDateInput.value;
+      const returnedValue = returnedOnInput.value;
+
+      tableRows.forEach(row => {
+        const title = row.cells[0].textContent.toLowerCase();
+        const borrowedOn = row.cells[1].textContent;
+        const dueDate = row.cells[2].textContent;
+        const returnedOn = row.cells[3].textContent;
+
+        const matchTitle = title.includes(titleValue);
+        const matchBorrowed = borrowedValue === "" || borrowedOn === borrowedValue;
+        const matchDue = dueValue === "" || dueDate === dueValue;
+        const matchReturned = returnedValue === "" || returnedOn === returnedValue;
+
+        if (matchTitle && matchBorrowed && matchDue && matchReturned) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+
+    titleInput.addEventListener("input", filterBorrowings);
+    borrowedOnInput.addEventListener("input", filterBorrowings);
+    dueDateInput.addEventListener("input", filterBorrowings);
+    returnedOnInput.addEventListener("input", filterBorrowings);
+  });
+  </script>
+
+</body>
+
+</html>

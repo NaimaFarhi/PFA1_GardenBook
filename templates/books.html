@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <title>Books</title>
+  
+</head>
+
+<body>
+  <!-- START NAVIGATION BAR -->
+  <header class="m-4 text-white">
+    <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
+      <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
+        <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="assets/brand/_logo-nobg.png" class="bi me-2" width="80" height="80" role="img"
+            aria-label="GardenBook">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item"><a href="home.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-house-door mx-2"></i>Home</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-clipboard2-data mx-2"></i>Dashboard</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="books.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Books</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="books.html">All Books</a></li>
+              <li><a class="dropdown-item" href="addBook.html">Add a book</a></li>
+              <li><a class="dropdown-item" href="borrows_returns.html">Borrowings & returns</a></li>
+              <li><a class="dropdown-item" href="stock.html">Stock</a></li>
+              <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="users.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Users</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="users.html">All Users</a></li>
+              <li><a class="dropdown-item" href="addUser.html">Add a User</a></li>
+            </ul>
+          </li>
+          <li><a href="settings.html" class="nav-link px-3 text-white fs-5"><i class="bi bi-gear mx-2"></i>Settings</a>
+          </li>
+        </ul>
+
+
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-brown text-light">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END NAVIGATION BAR -->
+
+  <main>
+
+    <div class="container-fluid row mx-3">
+      <!-- START SEARCH / FILTER SECTION -->
+      <div class="col-md-3 p-4">
+        <h2>Search Bar</h2>
+        <div class="row">
+          <input type="search" class="form-control form-control-dark" placeholder="Title, Author..."
+            aria-label="Search">
+        </div>
+        <!-- START GENRE SECTION -->
+        <div class="row my-2">
+          <p class="fs-5">Genre</p>
+          <div class="bg-light border rounded" style="max-height: 100px; overflow: auto;">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="fiction" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Fiction
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="bestseller" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                BestSeller
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="nonfiction" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Non-Fiction
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="mystery" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Mystery
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="thriller" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Thriller
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="scifi" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Sci-Fi
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="fantasy" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Fantasy
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="romance" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Romance
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="historical" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Historical
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="horror" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Horror
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="biography" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Biography
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="selfhelp" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Self-Help
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="poetry" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Poetry
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="graphicnovel" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Graphic Novel
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="childrens" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Children's
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="youngadult" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Young Adult
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="classic" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Classic
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="philosophy" id="condition-checkbox"
+                autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Philosophy
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="religion" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Religion
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="science" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Science
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="business" id="condition-checkbox" autocompleted="">
+              <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                Business
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <!-- END GENRE SECTION -->
+
+        <!-- START PUBLICATION YEAR / PAGE COUNT SECTION -->
+        <div class="row my-2">
+          <div class="col-md-6">
+            <p class="fs-5">Publication Year</p>
+            <input type="number" name="publicationYear" id="publicationYear" max="2025" min="1980"
+              class="form-control form-control-dark" value="2025">
+          </div>
+          <div class="col-md-6">
+            <p class="fs-5">Page count</p>
+            <input type="number" name="publicationYear" id="publicationYear" min="10"
+              class="form-control form-control-dark" value="10">
+          </div>
+
+        </div>
+        <!-- END PUBLICATION YEAR / PAGE COUNT SECTION -->
+
+        <!-- START LANGUAGE SECTION -->
+        <div class="row my-2">
+          <p class="fs-5">Language</p>
+          <select class="form-control" name="language" id="language">
+            <option value="">select a language</option>
+            <option value="arabic">Arabic</option>
+            <option value="french">French</option>
+            <option value="english">English</option>
+            <option value="german">German</option>
+            <option value="spanish">Spanish</option>
+          </select>
+        </div>
+        <!-- END LANGUAGE SECTION -->
+
+        <!-- START REVIEWS SECTION -->
+        <div class="row my-2">
+          <p class="fs-5">Review <span id="review_number">0/5</span></p>
+
+          <input type="range" name="review" id="review" min="0" max="5" style="color: #aabda0;" oninput="updateReview()"
+            value="0">
+        </div>
+        <!-- END REVIEWS SECTION -->
+
+        <!-- START AVAILABILITY SECTION -->
+        <div class="row my-2">
+          <p class="fs-5">Availability</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="availability" id="available" value="available" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Available
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="availability" id="checkedout" value="checkedout">
+            <label class="form-check-label" for="exampleRadios2">
+              Checked out
+            </label>
+          </div>
+        </div>
+        <!-- END AVAILABILITY SECTION -->
+
+      </div>
+      <!-- END SEARCH / FILTER SECTION -->
+
+      <!-- START BOOK DISPLAY SECTION -->
+      <div class="col">
+
+        <!-- START ROW OF 4 BOOKS SECTION -->
+        <div class="row m-4 d-flex justify-content-center align-items-center gap-5">
+
+          <!-- START ONE CARD BOOK SECTION -->
+          <div class="col-md-4 p-4 d-flex" style="width: 18rem;">
+
+            <div class="col book-card" data-title="Science of Mind" data-author="Marie Curie" data-genre="non-fiction"
+              data-language="french" data-year="2020" data-pages="280" data-review="5" data-availability="available">
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-center shadow-lg" style="background: #777 url('exempleA.jpeg') no-repeat center center / cover;
+                              height: 300px; width: 250px;
+                              border: 2px solid #8a998288;
+                              border-radius: 5px;">
+                  </div>
+                  <h5 class="card-title">Science of Mind</h5>
+                  <p class="card-text">by Marie Curie</p>
+                  <p class="card-text small">Genre: Non-Fiction</p>
+                  <p class="card-text small">Year: 2020</p>
+                  <p class="card-text small">Language: French</p>
+                  <a href="#" class="btn btn-brown text-light">Details</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- END ONE CARD BOOK SECTION -->
+
+          <div class="col-md-4 p-4 d-flex" style="width: 18rem;">
+
+            <div class="col book-card" data-title="The Great Adventure" data-author="John Doe" data-genre="fiction"
+              data-language="english" data-year="2022" data-pages="300" data-review="4" data-availability="available">
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-center shadow-lg" style="background: #777 url('exempleB.jpeg') no-repeat center center / cover;
+                              height: 300px; width: 250px;
+                              border: 2px solid #8a998288;
+                              border-radius: 5px;">
+                  </div>
+                  <h5 class="card-title">The Great Adventure</h5>
+                  <p class="card-text">by John Doe</p>
+                  <p class="card-text small">Genre: Fiction</p>
+                  <p class="card-text small">Year: 2022</p>
+                  <p class="card-text small">Language: English</p>
+                  <a href="#" class="btn btn-brown text-light">Details</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-4 p-4 d-flex" style="width: 18rem;">
+
+            <div class="col book-card" data-title="Legends of Eldor" data-author="A. K. Winters" data-genre="fantasy"
+              data-language="english" data-year="2021" data-pages="450" data-review="4" data-availability="unavailable">
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-center shadow-lg" style="background: #777 url('exempleC.jpeg') no-repeat center center / cover;
+                              height: 300px; width: 250px;
+                              border: 2px solid #8a998288;
+                              border-radius: 5px;">
+                  </div>
+                  <h5 class="card-title">Legends of Eldor</h5>
+                  <p class="card-text">by A. K. Winters</p>
+                  <p class="card-text small">Genre: Fantasy</p>
+                  <p class="card-text small">Year: 2021</p>
+                  <p class="card-text small">Language: English</p>
+                  <a href="#" class="btn btn-brown text-light">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-4 p-4 d-flex" style="width: 18rem;">
+
+            <div class="col book-card" data-title="Love in Casablanca" data-author="Layla Benali" data-genre="romance"
+              data-language="arabic" data-year="2023" data-pages="320" data-review="3" data-availability="available">
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center justify-content-center shadow-lg" style="background: #777 url('exempleD.jpeg') no-repeat center center / cover;
+                              height: 300px; width: 250px;
+                              border: 2px solid #8a998288;
+                              border-radius: 5px;">
+                  </div>
+                  <h5 class="card-title">Love in Casablanca</h5>
+                  <p class="card-text">by Layla Benali</p>
+                  <p class="card-text small">Genre: Romance</p>
+                  <p class="card-text small">Year: 2023</p>
+                  <p class="card-text small">Language: Arabic</p>
+                  <a href="#" class="btn btn-brown text-light">Details</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- END ROW OF 4 BOOKS SECTION -->
+      </div>
+
+
+
+      <!-- END BOOK DISPLAY SECTION -->
+    </div>
+
+
+  </main>
+  <!-- START FOOTER -->
+  <footer class="bg-green text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>We provide the best book management system to keep your library organized and efficient.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-3 border-light">
+
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 GardenBook. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    // Update review label
+    function updateReview() {
+      document.getElementById("review_number").textContent =
+        document.getElementById("review").value + "/5";
+    }
+
+
+    // Function to filter books based on search term and selected genres
+    function filterBooks() {
+      const searchTerm = document.querySelector('input[type="search"]').value.toLowerCase(); // Get the search term
+      const genreFilters = Array.from(document.querySelectorAll('.form-check-input:checked')).map(checkbox => checkbox.value); // Get selected genres
+      const books = document.querySelectorAll('.book-card'); // Get all book cards
+
+      books.forEach(book => {
+        const title = book.getAttribute('data-title').toLowerCase();
+        const author = book.getAttribute('data-author').toLowerCase();
+        const genre = book.getAttribute('data-genre').toLowerCase();
+
+        // Check if the book matches the search term and selected genres
+        const matchesSearch = title.includes(searchTerm) || author.includes(searchTerm);
+        const matchesGenre = genreFilters.length === 0 || genreFilters.includes(genre);
+
+        // Show or hide the book based on the filters
+        if (matchesSearch && matchesGenre) {
+          book.parentElement.style.display = 'block'; // Show the book
+        } else {
+          book.parentElement.style.display = 'none'; // Hide the book
+        }
+      });
+    }
+
+    // Add event listeners for input changes
+    document.querySelector('input[type="search"]').addEventListener('input', filterBooks); // Listen for search input
+    document.querySelectorAll('.form-check-input').forEach(checkbox => {
+      checkbox.addEventListener('change', filterBooks); // Listen for genre checkbox changes
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

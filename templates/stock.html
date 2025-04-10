@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <title>base page</title>
+</head>
+
+<body>
+  <!-- START NAVIGATION BAR -->
+  <header class="m-4 text-white">
+    <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
+      <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
+        <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="assets/brand/_logo-nobg.png" class="bi me-2" width="80" height="80" role="img"
+            aria-label="GardenBook">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item"><a href="home.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-house-door mx-2"></i>Home</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-clipboard2-data mx-2"></i>Dashboard</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="books.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Books</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="books.html">All Books</a></li>
+              <li><a class="dropdown-item" href="addBook.html">Add a book</a></li>
+              <li><a class="dropdown-item" href="borrows_returns.html">Borrowings & Returns</a></li>
+              <li><a class="dropdown-item" href="stock.html">Stock</a></li>
+              <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="users.html" id="dropdown10"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Users</a>
+            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
+              <li><a class="dropdown-item" href="users.html">All Users</a></li>
+              <li><a class="dropdown-item" href="addUser.html">Add a User</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="settings.html" class="nav-link px-3 text-white fs-5"><i
+                class="bi bi-gear mx-2"></i>Settings</a></li>
+        </ul>
+
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-brown text-light">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END NAVIGATION BAR -->
+
+  <main>
+    <div class="container-fluid row m-2">
+      <!-- START SEARCH SIDEBAR -->
+      <div class="col-md-3 p-4">
+        <h2>Search Stock</h2>
+  
+        <!-- ISBN -->
+        <div class="mb-3">
+          <label for="isbnSearch" class="form-label">ISBN</label>
+          <input type="text" class="form-control" id="isbnSearch" placeholder="Enter ISBN">
+        </div>
+  
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="titleSearch" class="form-label">Book Title</label>
+          <input type="text" class="form-control" id="titleSearch" placeholder="Enter Title">
+        </div>
+  
+        <!-- Author -->
+        <div class="mb-3">
+          <label for="authorSearch" class="form-label">Author</label>
+          <input type="text" class="form-control" id="authorSearch" placeholder="Enter Author">
+        </div>
+  
+        <!-- Edition -->
+        <div class="mb-3">
+          <label for="editionSearch" class="form-label">Edition</label>
+          <input type="text" class="form-control" id="editionSearch" placeholder="Enter Edition">
+        </div>
+  
+        <!-- Publication Year -->
+        <div class="mb-3">
+          <label for="yearSearch" class="form-label">Publication Year</label>
+          <input type="number" class="form-control" id="yearSearch" placeholder="Enter Year">
+        </div>
+  
+        <!-- Min Stock -->
+        <div class="mb-3">
+          <label for="stockSearch" class="form-label">Minimum Stock</label>
+          <input type="number" class="form-control" id="stockSearch" placeholder="Min Quantity">
+        </div>
+      </div>
+      <!-- END SEARCH SIDEBAR -->
+  
+      <!-- START TABLE -->
+      <div class="col p-4">
+        <h2>Book Stock</h2>
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>ISBN</th>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Edition</th>
+              <th>Year</th>
+              <th>Stock Qty</th>
+              <th>Threshold Alert</th>
+              <th>Last Update</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody id="stockTable">
+            <tr>
+              <td>978-3-16-148410-0</td>
+              <td><a href="#" class="text-dark text-decoration-none">The Great Gatsby</a></td>
+              <td>F. Scott Fitzgerald</td>
+              <td>1st</td>
+              <td>1925</td>
+              <td>3</td>
+              <td class="text-danger">Low</td>
+              <td>2025-04-01</td>
+              <td><button class="btn btn-sm btn-brown text-light edit-btn" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+      <!-- END TABLE -->
+    </div>
+  
+    <!-- EDIT MODAL -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="editForm">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Edit Stock Quantity</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="newQuantity" class="form-label">New Stock Quantity</label>
+              <input type="number" id="newQuantity" class="form-control" required>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-green text-light">Update</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="bg-green text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>We provide the best book management system to keep your library organized and efficient.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-3 border-light">
+
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 GardenBook. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tableRows = document.querySelectorAll("#stockTable tr");
+  
+      const filters = {
+        isbn: document.getElementById("isbnSearch"),
+        title: document.getElementById("titleSearch"),
+        author: document.getElementById("authorSearch"),
+        edition: document.getElementById("editionSearch"),
+        year: document.getElementById("yearSearch"),
+        stock: document.getElementById("stockSearch")
+      };
+  
+      const filterStock = () => {
+        const isbn = filters.isbn.value.toLowerCase();
+        const title = filters.title.value.toLowerCase();
+        const author = filters.author.value.toLowerCase();
+        const edition = filters.edition.value.toLowerCase();
+        const year = filters.year.value;
+        const stock = filters.stock.value;
+  
+        tableRows.forEach(row => {
+          const cells = row.querySelectorAll("td");
+          const [isbnText, titleText, authorText, editionText, yearText, stockQtyText] = [
+            cells[0].textContent.toLowerCase(),
+            cells[1].textContent.toLowerCase(),
+            cells[2].textContent.toLowerCase(),
+            cells[3].textContent.toLowerCase(),
+            cells[4].textContent,
+            cells[5].textContent
+          ];
+  
+          const matches =
+            isbnText.includes(isbn) &&
+            titleText.includes(title) &&
+            authorText.includes(author) &&
+            editionText.includes(edition) &&
+            (year === "" || yearText === year) &&
+            (stock === "" || parseInt(stockQtyText) >= parseInt(stock));
+  
+          row.style.display = matches ? "" : "none";
+        });
+      };
+  
+      // Event listeners for all filter fields
+      Object.values(filters).forEach(input => {
+        input.addEventListener("input", filterStock);
+      });
+  
+      // Modal edit logic
+      let selectedRow = null;
+      document.querySelectorAll(".edit-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          selectedRow = e.target.closest("tr");
+          const currentQty = selectedRow.cells[5].textContent;
+          document.getElementById("newQuantity").value = currentQty;
+        });
+      });
+  
+      document.getElementById("editForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (selectedRow) {
+          const newQty = document.getElementById("newQuantity").value;
+          selectedRow.cells[5].textContent = newQty;
+          const threshold = parseInt(newQty) < 5 ? "Low" : "OK";
+          selectedRow.cells[6].textContent = threshold;
+          selectedRow.cells[6].className = threshold === "Low" ? "text-danger" : "text-success";
+          const today = new Date().toISOString().split("T")[0];
+          selectedRow.cells[7].textContent = today;
+          const modal = bootstrap.Modal.getInstance(document.getElementById("editModal"));
+          modal.hide();
+        }
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
