@@ -1,322 +1,213 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="base.css">
-  <title>Home</title>
-  
-</head>
+{% block content %}
+<!-- START NEW ARRIVALS SECTION -->
+<div id="myCarouselNewArrivals" class="carousel slide" data-bs-ride="carousel">
+  <h1 class="d-flex align-items-center justify-content-center my-2" style="font-size: 3.5em;">!!! New Arrivals !!!
+  </h1>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
 
-<body>
-  <!-- START NAVIGATION BAR -->
-  <header class="m-4 text-white">
-    <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
-      <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
-        <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="assets/brand/_logo-nobg.png" class="bi me-2" width="80" height="80" role="img"
-            aria-label="GardenBook">
-        </a>
+    <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#8a9982" />
+      </svg>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="home.html" class="nav-link px-3 text-white fs-5"><i
-                class="bi bi-house-door mx-2"></i>Home</a></li>
-          <li class="nav-item"><a href="dashboard.html" class="nav-link px-3 text-white fs-5"><i
-                class="bi bi-clipboard2-data mx-2"></i>Dashboard</a>
-          </li>
+      <div class="container">
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fs-5 text-light" href="books.html" id="dropdown10"
-              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Books</a>
-            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
-              <li><a class="dropdown-item" href="books.html">All Books</a></li>
-              <li><a class="dropdown-item" href="addBook.html">Add a book</a></li>
-              <li><a class="dropdown-item" href="borrows_returns.html">Borrowings & returns</a></li>
-              <li><a class="dropdown-item" href="stock.html">Stock</a></li>
-              <li><a class="dropdown-item" href="orders.html">Orders</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fs-5 text-light" href="users.html" id="dropdown10"
-              data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Users</a>
-            <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
-              <li><a class="dropdown-item" href="users.html">All Users</a></li>
-              <li><a class="dropdown-item" href="addUser.html">Add a User</a></li>
-            </ul>
-          </li>
-          <li><a href="settings.html" class="nav-link px-3 text-white fs-5"><i class="bi bi-gear mx-2"></i>Settings</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>
-
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-brown text-light">Sign-up</button>
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
+            style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 1.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
+          </div>
         </div>
       </div>
     </div>
-  </header>
-  <!-- END NAVIGATION BAR -->
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#8a9982" />
+      </svg>
 
-  <main>
+      <div class="container">
 
-    <!-- START NEW ARRIVALS SECTION -->
-    <div id="myCarouselNewArrivals" class="carousel slide" data-bs-ride="carousel">
-      <h1 class="d-flex align-items-center justify-content-center my-2" style="font-size: 3.5em;">!!! New Arrivals !!!
-      </h1>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#8a9982" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
-                style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 1.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
+            style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 2.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
           </div>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#8a9982" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
-                style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 2.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#8a9982" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center  shadow-lg"
-                style="background: #777 url('exempleD.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 3.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- END NEW ARRIVALS SECTION -->
-
-    <hr class="divider">
-
-    <!-- START RECOMMENDATIONS SECTION -->
-    <div id="myCarouselRecommendations" class="carousel slide" data-bs-ride="carousel">
-      <h1 class="d-flex align-items-center justify-content-center my-2" style="font-size: 3.5em;">Recommendations</h1>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#402e21" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
-                style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 1.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#402e21" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
-                style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 2.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#402e21" />
-          </svg>
-
-          <div class="container">
-
-            <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
-              <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
-                style="background: #777 url('exempleD.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
-              </div>
-              <div>
-                <h1>Book Title 3.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselRecommendations"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarouselRecommendations"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- END RECOMMENDATIONS SECTION -->
-
-    <hr class="divider">
-
-    <!-- START MOST LIKED BOOKS PER WEEK/MONTH -->
-    <div class="container marketing">
-      <!-- START BOOK OF THE WEEK SECTION -->
-      <div class="row featurette d-flex justify-content-center align-items-center gap-5">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">BOOK OF THE WEEK. <br> <span class="text-muted">Book title here - author</span>
-          </h2>
-          <p class="lead">&lt;&lt;<i>Top comment here</i>&gt;&gt;</p>
-        </div>
-        <div class="col-md-5 d-flex align-items-center justify-content-center shadow-lg"
-          style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #5d432f88; border-radius: 10px;">
-        </div>
-      </div>
-
-      <!-- END BOOK OF THE WEEK SECTION -->
-
-      <hr class="divider">
-
-      <!-- START BOOK OF THE MONTH SECTION -->
-      <div class="row featurette d-flex justify-content-center align-items-center gap-5">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">BOOK OF THE MONTH. <br> <span class="text-muted">Book title here -
-              author</span></h2>
-          <p class="lead">&lt;&lt;<i>Top comment here</i>&gt;&gt;</p>
-        </div>
-        <div class="col-md-5 order-md-1 d-flex align-items-center justify-content-center shadow-lg"
-          style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #5d432f88; border-radius: 10px;">
-        </div>
-      </div>
-      <!-- END BOOK OF THE MONTH SECTION -->
-    </div>
-    <!-- END MOST LIKED BOOKS PER WEEK/MONTH -->
-  </main>
-<!-- FOOTER -->
-<footer class="bg-green text-light py-4 mt-5">
-  <div class="container">
-    <div class="row">
-      <!-- About Section -->
-      <div class="col-md-4">
-        <h5>About Us</h5>
-        <p>We provide the best book management system to keep your library organized and efficient.</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-4">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Services</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Social Media Links -->
-      <div class="col-md-4">
-        <h5>Follow Us</h5>
-        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#8a9982" />
+      </svg>
 
-    <hr class="my-3 border-light">
+      <div class="container">
 
-    <!-- Copyright -->
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 GardenBook. All Rights Reserved.</p>
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center  shadow-lg"
+            style="background: #777 url('exempleD.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #8a998288; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 3.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarouselNewArrivals" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- END NEW ARRIVALS SECTION -->
 
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<hr class="divider">
+
+<!-- START RECOMMENDATIONS SECTION -->
+<div id="myCarouselRecommendations" class="carousel slide" data-bs-ride="carousel">
+  <h1 class="d-flex align-items-center justify-content-center my-2" style="font-size: 3.5em;">Recommendations</h1>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#402e21" />
+      </svg>
+
+      <div class="container">
+
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
+            style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 1.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#402e21" />
+      </svg>
+
+      <div class="container">
+
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
+            style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 2.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#402e21" />
+      </svg>
+
+      <div class="container">
+
+        <div class="carousel-caption text-start d-flex justify-content-between align-items-center gap-5">
+          <div class="col-4 d-flex align-items-center justify-content-center shadow-lg"
+            style="background: #777 url('exempleD.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #402e2188; border-radius: 10px;">
+          </div>
+          <div>
+            <h1>Book Title 3.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-outline-light" href="#">See Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarouselRecommendations" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- END RECOMMENDATIONS SECTION -->
+
+<hr class="divider">
+
+<!-- START MOST LIKED BOOKS PER WEEK/MONTH -->
+<div class="container marketing">
+  <!-- START BOOK OF THE WEEK SECTION -->
+  <div class="row featurette d-flex justify-content-center align-items-center gap-5">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">BOOK OF THE WEEK. <br> <span class="text-muted">Book title here - author</span>
+      </h2>
+      <p class="lead">&lt;&lt;<i>Top comment here</i>&gt;&gt;</p>
+    </div>
+    <div class="col-md-5 d-flex align-items-center justify-content-center shadow-lg"
+      style="background: #777 url('exempleB.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #5d432f88; border-radius: 10px;">
+    </div>
+  </div>
+
+  <!-- END BOOK OF THE WEEK SECTION -->
+
+  <hr class="divider">
+
+  <!-- START BOOK OF THE MONTH SECTION -->
+  <div class="row featurette d-flex justify-content-center align-items-center gap-5">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">BOOK OF THE MONTH. <br> <span class="text-muted">Book title here -
+          author</span></h2>
+      <p class="lead">&lt;&lt;<i>Top comment here</i>&gt;&gt;</p>
+    </div>
+    <div class="col-md-5 order-md-1 d-flex align-items-center justify-content-center shadow-lg"
+      style="background: #777 url('exempleA.jpeg') no-repeat center center / cover; height: 400px; width: 250px; border: 2px solid #5d432f88; border-radius: 10px;">
+    </div>
+  </div>
+  <!-- END BOOK OF THE MONTH SECTION -->
+</div>
+<!-- END MOST LIKED BOOKS PER WEEK/MONTH -->
+{% endblock %}
 
 
-</body>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
-</html>

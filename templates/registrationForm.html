@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c90e905d4e46c89de73f04ca0bdca7d69395177
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +9,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Library Reader Registration</title>
+<<<<<<< HEAD
 {% load static %}
 <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
   {% load static %}
  <link rel="stylesheet" href="{% static 'base.css' %}">
+=======
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+>>>>>>> 4c90e905d4e46c89de73f04ca0bdca7d69395177
 </head>
 
 <body>
@@ -19,6 +27,7 @@
         <h4 class="mb-0">Registration Form</h4>
       </div>
       <div class="card-body">
+<<<<<<< HEAD
         <form id="registrationForm" method="POST" action="">
           {% csrf_token %}
 
@@ -171,6 +180,160 @@ if (password.value !== confirmPassword.value) {
 <!-- END JS VALIDATION -->
 {% load static %}
 <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+=======
+        <form id="registrationForm">
+
+          
+          <div class="row mb-3">
+            <!-- START FIRST NAME SECTION -->
+            <div class="col">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" class="form-control" id="firstName" required />
+            </div>
+            <!-- END FIRST NAME SECTION -->
+            <!-- START LAST NAME SECTION -->
+            <div class="col">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" required />
+            </div>
+            <!-- END LAST NAME SECTION -->
+          </div>
+          
+
+          <div class="row mb-3">
+            <!-- START CIN SECTION -->
+            <div class="col">
+              <label for="cin" class="form-label">CIN *</label>
+              <input type="text" class="form-control" id="cin" required />
+            </div>
+            <!-- END CIN SECTION -->
+            <!-- START EMAIL SECTION -->
+            <div class="col">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <!-- END EMAIL SECTION -->
+          </div>
+          
+
+          
+          <div class="row mb-3">
+            <!-- START PASSWORD SECTION -->
+            <div class="col">
+              <label for="password" class="form-label">Password *</label>
+              <input type="password" class="form-control" id="password" required />
+            </div>
+            <!-- END PASSWORD SECTION -->
+            <!-- START CONFIRM PASSWORD SECTION -->
+            <div class="col">
+              <label for="confirmPassword" class="form-label">Confirm Password *</label>
+              <input type="password" class="form-control" id="confirmPassword" required />
+              <div class="form-text text-danger d-none" id="passwordMismatch">Passwords do not match.</div>
+            </div>
+            <!-- END CONFIRM PASSWORD SECTION -->
+          </div>
+          
+          
+
+          <!-- START PHONE SECTION -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number *</label>
+            <input type="tel" class="form-control" id="phone" required />
+          </div>
+          <!-- END PHONE SECTION -->
+
+          <!-- START DATE OF BIRTH SECTION -->
+          <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth *</label>
+            <input type="date" class="form-control" id="dob" required />
+          </div>
+          <!-- END DATE OF BIRTH SECTION -->
+
+          <!-- START OPTIONAL FIELDS SECTION -->
+          <h5 class="mt-4">Optional Information</h5>
+
+          <!-- START READER TYPE SECTION -->
+          <div class="mb-3">
+            <label for="readerType" class="form-label">Reader Type</label>
+            <select class="form-select" id="readerType">
+              <option value="">Select</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+              <option value="public">General Public</option>
+            </select>
+          </div>
+          <!-- END READER TYPE SECTION -->
+
+          <!-- START ADDRESS SECTION -->
+          <div class="mb-3">
+            <label for="address" class="form-label">Street Address</label>
+            <input type="text" class="form-control" id="address" />
+          </div>
+          <!-- END ADDRESS SECTION -->
+
+          <!-- START CITY / POSTAL / COUNTRY SECTION -->
+          <div class="row mb-3">
+            <div class="col">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" />
+            </div>
+            <div class="col">
+              <label for="postalCode" class="form-label">Postal Code</label>
+              <input type="text" class="form-control" id="postalCode" />
+            </div>
+            <div class="col">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" class="form-control" id="country" />
+            </div>
+          </div>
+          <!-- END CITY / POSTAL / COUNTRY SECTION -->
+
+          <!-- START PROFILE PICTURE SECTION -->
+          <div class="mb-3">
+            <label for="profileImage" class="form-label">Profile Picture</label>
+            <input type="file" class="form-control" id="profileImage" accept="image/*" />
+          </div>
+          <!-- END PROFILE PICTURE SECTION -->
+          <!-- END OPTIONAL FIELDS SECTION -->
+
+          <!-- START TERMS AND CONDITIONS SECTION -->
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+            <label class="form-check-label" for="agreeTerms">
+              I agree to the Terms & Conditions *
+            </label>
+          </div>
+          <!-- END TERMS AND CONDITIONS SECTION -->
+
+          <!-- START SUBMIT BUTTON -->
+          <button type="submit" class="btn btn-green text-light">Register</button>
+          <!-- END SUBMIT BUTTON -->
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- START JS VALIDATION -->
+  <script>
+    const form = document.getElementById('registrationForm');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const mismatchMessage = document.getElementById('passwordMismatch');
+
+    form.addEventListener('change', function (e) {
+      if (password.value !== confirmPassword.value) {
+        e.preventDefault();
+        mismatchMessage.classList.remove('d-none');
+      } else {
+        mismatchMessage.classList.add('d-none');
+      }
+    });
+  </script>
+  <!-- END JS VALIDATION -->
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 4c90e905d4e46c89de73f04ca0bdca7d69395177
 </body>
 
 </html>
