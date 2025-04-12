@@ -7,7 +7,7 @@
 
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="base.css">
-  <title>base page</title>
+  <title>{% block title %}My Site{% endblock %}</title>
 </head>
 
 <body>
@@ -62,7 +62,9 @@
   <!-- END NAVIGATION BAR -->
 
   <main>
-
+    {% block content %}
+    <!-- Default content goes here -->
+    {% endblock %}
   </main>
   <footer class="bg-green text-light py-4 mt-5">
     <div class="container">
