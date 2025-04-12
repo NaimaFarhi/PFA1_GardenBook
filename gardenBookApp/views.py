@@ -1,8 +1,21 @@
 from django.shortcuts import render,redirect
 from .forms import*
 from .models import Livre
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
+def registerPage(request):
+   form = CreateUserForm()
 
+   if request.method == 'POST':
+      form = CreateUserForm()
+      if form.is_valid():
+         form.save()
+   
+   context = {'form':form}
+   return render(request,'registrationForm.html',context)
+def loginPage(request):
+   context = {}
+   return render(request,'login.html',context)
 def book_list(request):
     context = {'book_list':Livre.objects.all()}
     return render(request,"books/book_list.html",context)
