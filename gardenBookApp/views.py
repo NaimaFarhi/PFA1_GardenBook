@@ -5,7 +5,7 @@ from .models import Livre
 
 def book_list(request):
     context = {'book_list':Livre.objects.all()}
-    return render(request,"books/book_list.html",context)
+    return render(request,"templates/books.html",context)
    
 
 def book_form(request,ISBN=0):
