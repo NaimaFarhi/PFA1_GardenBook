@@ -2,22 +2,24 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class RoleName(models.TextChoices):
-    ADMIN = "admin"
+    BIBLIOTHECAIRE = "bibliothecaire"
     LECTEUR = "lecteur"
 
 class User(AbstractUser):
-        groups = models.ManyToManyField(
-        "auth.Group",
-        related_name="User_groups",
-        blank=True
-    )
-        user_permissions = models.ManyToManyField(
-        "auth.Permission",
-        related_name="User_permissions",
-        blank=True
-    )
+    cin = models.CharField(max_length=20, unique=True) 
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=15, null=True, blank=True)
+    dob = models.DateField(null=True, blank=True)
+    role = models.CharField(max_length=20, choices=RoleName.choices)
+    address = models.CharField(max_length=255, null=True, blank=True)
+    city = models.CharField(max_length=100, null=True, blank=True)
+    postal_code = models.CharField(max_length=20, null=True, blank=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
 
-        role = models.CharField(max_length=20, choices=RoleName.choices)
+    def __str__(self):
+        return self.username
+
 
 class Livre(models.Model):
     ISBN = models.CharField(max_length=13, unique=True)
@@ -25,14 +27,8 @@ class Livre(models.Model):
     auteur = models.CharField(max_length=255)
     stock = models.IntegerField()
 
-class Lecteur(User):
-    pass
-
-class Bibliothecaire(User):
-    pass
-
 class LivreEmprunte(models.Model):
-    lecteur = models.ForeignKey(Lecteur, on_delete=models.CASCADE)
+    utilisateur = models.ForeignKey(User, on_delete=models.CASCADE, default=1) 
     livre = models.ForeignKey(Livre, on_delete=models.CASCADE)
     date_emprunt = models.DateField()
     date_limite_retour = models.DateField()
@@ -40,19 +36,19 @@ class LivreEmprunte(models.Model):
 
 class Reservation(models.Model):
     id_reservation = models.CharField(max_length=50, unique=True)
-    lecteur = models.ForeignKey(Lecteur, on_delete=models.CASCADE)
+    lecteur = models.ForeignKey(User, on_delete=models.CASCADE)
     livre = models.ForeignKey(Livre, on_delete=models.CASCADE)
 
 class Evenement(models.Model):
     type = models.CharField(max_length=100)
     date = models.DateField()
-    responsable = models.ForeignKey(Bibliothecaire, on_delete=models.CASCADE)
+    responsable = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Critique(models.Model):
     id_crt = models.CharField(max_length=50, unique=True)
     notation = models.IntegerField()
     commentaire = models.TextField()
-    lecteur = models.ForeignKey(Lecteur, on_delete=models.CASCADE)
+    lecteur = models.ForeignKey(User, on_delete=models.CASCADE)
     livre = models.ForeignKey(Livre, on_delete=models.CASCADE)
 
 class Amende(models.Model):
@@ -63,4 +59,4 @@ class Amende(models.Model):
 
 class Alerte(models.Model):
     id_alerte = models.CharField(max_length=50, unique=True)
-    lecteur = models.ForeignKey(Lecteur, on_delete=models.CASCADE)
+    lecteur = models.ForeignKey(User, on_delete=models.CASCADE)

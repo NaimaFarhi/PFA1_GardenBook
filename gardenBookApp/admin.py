@@ -2,8 +2,6 @@ from django.contrib import admin
 from .models import (
     User,
     Livre,
-    Lecteur,
-    Bibliothecaire,
     LivreEmprunte,
     Reservation,
     Evenement,
@@ -14,8 +12,6 @@ from .models import (
 
 admin.site.register(User)
 admin.site.register(Livre)
-admin.site.register(Lecteur)
-admin.site.register(Bibliothecaire)
 admin.site.register(LivreEmprunte)
 admin.site.register(Reservation)
 admin.site.register(Evenement)

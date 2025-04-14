@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+AUTH_USER_MODEL = 'gardenBookApp.User'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "gardenBookApp",
     'crispy_forms',
-    'crispy_bootstrap4',
+    'crispy_bootstrap5',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -71,6 +72,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
 ]
 
 WSGI_APPLICATION = "GardenBook.wsgi.application"

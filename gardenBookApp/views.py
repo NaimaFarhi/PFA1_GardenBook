@@ -1,7 +1,22 @@
 from django.shortcuts import render,redirect
 from .forms import*
-from .models import Livre
+from .models import Livre, User
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
+""" def registerPage(request):
+   form = CreateUserForm()
+
+   if request.method == 'POST':
+      form = CreateUserForm()
+      if form.is_valid():
+         form.save()
+   
+   context = {'form':form}
+   return render(request,'registrationForm.html',context)
+
+def loginPage(request):
+   context = {}
+   return render(request,'login.html',context)
 
 def book_list(request):
     context = {'book_list':Livre.objects.all()}
@@ -27,6 +42,13 @@ def book_form(request,ISBN=0):
          return redirect("/list")
 
 def book_delete(request):
-    return
+    return """
+
+#Display all the users
+def display_user(request):
+   users = User.objects.all()
+   context = {'users': users}
+   return render(request, '../templates/users.html', context)
+
 
 
