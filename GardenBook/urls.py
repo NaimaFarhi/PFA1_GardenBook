@@ -20,5 +20,10 @@ from django.urls import path,include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("",include(("gardenBookApp.urls","gardenBookApp"),"gardenBookApp"))
+    path("",include(("gardenBookApp.urls","gardenBookApp"),"gardenBookApp")),
+    path('', include('gardenBookApp.urls')),
+    path('register', include('gardenBookApp.urls')),
+    path('book_list', include('gardenBookApp.urls')),
+    path('book_edit', include('gardenBookApp.urls')),
+    path('addbook', include('gardenBookApp.urls')),
 ]

@@ -38,11 +38,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "gardenBookApp",
-    "crispy_forms",
+     "crispy_forms",
     "crispy_bootstrap4",
+      'widget_tweaks',
+      'django_extensions',
+    "gardenBookApp",
+   
 ]
-
+LOGIN_URL = 'login/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 MIDDLEWARE = [
@@ -75,7 +78,7 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    "/var/www/static/",
+ 
 ]
 
 WSGI_APPLICATION = "GardenBook.wsgi.application"

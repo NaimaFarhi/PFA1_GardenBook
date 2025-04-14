@@ -4,9 +4,14 @@ from django.contrib.auth.models import AbstractUser
 class RoleName(models.TextChoices):
     BIBLIOTHECAIRE = "bibliothecaire"
     LECTEUR = "lecteur"
+class GenreName(models.TextChoices):
+   Children = "children"
+   YA = "Young Adult"
+   Adult = "Adult"
+
 
 class User(AbstractUser):
-    cin = models.CharField(max_length=20, unique=True) 
+    cin = models.CharField(max_length=20, unique=True, default=1) 
     phone_number = models.CharField(max_length=15, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
     role = models.CharField(max_length=20, choices=RoleName.choices)
@@ -21,9 +26,17 @@ class User(AbstractUser):
 
 class Livre(models.Model):
     ISBN = models.CharField(max_length=13, unique=True)
-    nom = models.CharField(max_length=255)
-    auteur = models.CharField(max_length=255)
-    stock = models.IntegerField()
+    nom = models.CharField(max_length=255,default="")
+    auteur = models.CharField(max_length=255,default="")
+    dispo = models.BooleanField(default=True)
+    pubDate = models.DateField(null=True, blank=True)
+    nbPage = models.IntegerField(default="")
+    language = models.CharField(max_length=244,default="")
+    genres = models.CharField(max_length=244,default="")
+    keywords = models.CharField(max_length=244,default="")
+    description = models.CharField(max_length=244,default="")
+    audience = models.CharField(max_length=20, choices=GenreName.choices, default="")
+
 
 class LivreEmprunte(models.Model):
     utilisateur = models.ForeignKey(User, on_delete=models.CASCADE, default=1) 

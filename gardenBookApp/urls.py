@@ -1,11 +1,14 @@
 
 from django.urls import path,include
-from .views import book_list,book_form,registerPage,loginPage
+from .views import book_list,book_form,register,login_view,home
 urlpatterns = [
-    path('register/',registerPage,name='register'),
-    path('login/',loginPage,name='login'),
-    path('',book_form,name="book_insert"),
-    path('list/',book_list),
-    path('<str:ISBN>/',book_form,name="book_edit")
+   
+    path('login/',login_view,name='login'),
+     path('register/', register, name='register'),
+    path('',home,name='home'),
+    path('addbook/',book_form,name='addbook'),
+    path('book_list/',book_list,name="book_list"),
+    path('<int:id>/',book_form,name="book_edit")
+    
 
 ]
