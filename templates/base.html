@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="base.css">
+  {% load static %}
+  <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'base.css' %}">
   <title>{% block title %}My Site{% endblock %}</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
       <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
         <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="assets/brand/_logo-nobg.png" class="bi me-2" width="80" height="80" role="img"
+          <img src="{% static 'assets/brand/_logo-nobg.png' %}" class="bi me-2" width="80" height="80" role="img"
             aria-label="GardenBook">
         </a>
 
@@ -31,8 +31,8 @@
             <a class="nav-link dropdown-toggle fs-5 text-light" href="books.html" id="dropdown10"
               data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Books</a>
             <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
-              <li><a class="dropdown-item" href="books.html">All Books</a></li>
-              <li><a class="dropdown-item" href="addBook.html">Add a book</a></li>
+              <li><a class="dropdown-item" href="{% url 'book_list' %}">All Books</a></li>
+              <li><a class="dropdown-item" href="{% url 'addbook' %}">Add a book</a></li>
               <li><a class="dropdown-item" href="borrows_returns.html">Borrowings & Returns</a></li>
               <li><a class="dropdown-item" href="stock.html">Stock</a></li>
               <li><a class="dropdown-item" href="orders.html">Orders</a></li>
@@ -50,7 +50,6 @@
           <li class="nav-item"><a href="settings.html" class="nav-link px-3 text-white fs-5"><i
                 class="bi bi-gear mx-2"></i>Settings</a></li>
         </ul>
-
 
         <div class="text-end">
           <button type="button" class="btn btn-outline-light me-2">Login</button>
@@ -104,8 +103,8 @@
       </div>
     </div>
   </footer>
-
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 
 </html>
