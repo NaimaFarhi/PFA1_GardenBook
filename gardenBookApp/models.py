@@ -11,13 +11,10 @@ class GenreName(models.TextChoices):
 
 
 class User(AbstractUser):
-<<<<<<< HEAD
     cin = models.CharField(max_length=20, unique=True) 
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-=======
     cin = models.CharField(max_length=20, unique=True, default=1) 
->>>>>>> 7f89e379592479be3285f73d3f91592274217ed7
     phone_number = models.CharField(max_length=15, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
     role = models.CharField(max_length=20, choices=RoleName.choices)
