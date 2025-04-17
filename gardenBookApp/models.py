@@ -2,12 +2,18 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class RoleName(models.TextChoices):
+    ADMIN = 'Administrator'
     BIBLIOTHECAIRE = "bibliothecaire"
     LECTEUR = "lecteur"
 class GenreName(models.TextChoices):
    Children = "children"
    YA = "Young Adult"
    Adult = "Adult"
+
+class MembershipStatus(models.TextChoices):
+    ACTIVE = 'Active'
+    INACTIVE = 'Inactive'
+    SUSPENDED = 'Suspended'
 
 
 class User(AbstractUser):
@@ -22,6 +28,7 @@ class User(AbstractUser):
     city = models.CharField(max_length=100, null=True, blank=True)
     postal_code = models.CharField(max_length=20, null=True, blank=True)
     country = models.CharField(max_length=100, null=True, blank=True)
+    status = models.CharField(max_length=20, choices=MembershipStatus.choices, default=MembershipStatus.ACTIVE)
 
     def __str__(self):
         return self.username

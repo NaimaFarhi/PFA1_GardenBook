@@ -1,170 +1,171 @@
-{% extends 'base.html'}
+{% extends 'base.html' %}
 
 
 {% block content %}
-    <!-- START DISPLAY USERS -->
-    <div class="container-fluid row m-2">
-      <!-- START SEARCH BAR SECTION -->
-      <div class="col-md-3 p-4">
-        <h2>Search Users</h2>
-
-        <!-- START MATRICULE SEARCH -->
-        <div class="row my-2">
-          <p class="fs-5">Matricule</p>
-          <input type="search" class="form-control form-control-dark" placeholder="Enter Matricule" aria-label="Search">
-        </div>
-        <!-- END MATRICULE SEARCH -->
-
-        <!-- START CIN SEARCH -->
-        <div class="row my-2">
-          <p class="fs-5">CIN</p>
-          <input type="search" class="form-control form-control-dark" placeholder="Enter CIN" aria-label="Search">
-        </div>
-        <!-- END CIN SEARCH -->
-
-        <!-- START NAME SEARCH -->
-        <div class="row my-2">
-          <p class="fs-5">Name</p>
-          <input type="search" class="form-control form-control-dark" placeholder="First or Last Name"
-            aria-label="Search">
-        </div>
-        <!-- END NAME SEARCH -->
-
-        <!-- START ROLE FILTER -->
-        <div class="row my-2">
-          <p class="fs-5">Role</p>
-          <select class="form-control" name="role" id="role">
-            <option value="">Select a Role</option>
-            <option value="librarian">Librarian</option>
-            <option value="reader">Reader</option>
-            <option value="admin">Admin</option>
-          </select>
-        </div>
-        <!-- END ROLE FILTER -->
-
-        <!-- START DATE OF BIRTH FILTER -->
-        <div class="row my-2">
-          <p class="fs-5">Date of Birth</p>
-          <input type="date" class="form-control form-control-dark" name="dob" id="dob">
-        </div>
-        <!-- END DATE OF BIRTH FILTER -->
-
-        <!-- START MEMBERSHIP STATUS FILTER -->
-        <div class="row my-2">
-          <p class="fs-5">Membership Status</p>
-          <select class="form-control" name="membershipStatus" id="membershipStatus">
-            <option value="">Select Status</option>
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
-            <option value="suspended">Suspended</option>
-          </select>
-        </div>
-        <!-- END MEMBERSHIP STATUS FILTER -->
 
 
-      </div>
-      <!-- END SEARCH BAR SECTION -->
+<!-- START DISPLAY USERS -->
+<div class="container-fluid row m-2">
+  <!-- START SEARCH BAR SECTION -->
+  <div class="col-md-3 p-4">
+    <h2>Search Users</h2>
 
-
-      <!-- START TABLE OF USERS -->
-      <div class="col m-2">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Matricule</th>
-              <th>Photo</th>
-              <th>CIN</th>
-              <th>First Name</th>
-              <th>Last name</th>
-              <th>Role</th>
-              <th>DOB</th>
-              <th>Membership Status</th>
-              <th>Edit</th>
-
-            </tr>
-          </thead>
-          <tbody>
-            {% for user in users %}
-            <tr>
-              <td>{{user.id}}</td>
-              <td><img src="user1.jpg" alt="User 1" class="img-thumbnail" width="50"></td>
-              <td>{{user.cin}}</td>
-              <td>{{user.first_name}}</td>
-              <td>{{user.last_name}}</td>
-              <td>{{user.role}}</td>
-              <td>{{user.dob}}</td>
-              <td>Active</td>
-              <td><a href="#" class="btn bg-brown"><i class="bi bi-pencil text-light"></i></a></td>
-            </tr>
-            {% endfor %}
-          </tbody>
-
-
-        </table>
-      </div>
-      <!-- END TABLE OF USERS -->
+    <!-- START MATRICULE SEARCH -->
+    <div class="row my-2">
+      <p class="fs-5">Matricule</p>
+      <input type="search" class="form-control form-control-dark" placeholder="Enter Matricule" aria-label="Search">
     </div>
-    <!-- END DISPLAY USERS -->
+    <!-- END MATRICULE SEARCH -->
 
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Get input fields for Matricule, CIN, Name, Role, and Date of Birth
-      const matriculeInput = document.querySelector('input[placeholder="Enter Matricule"]');
-      const cinInput = document.querySelector('input[placeholder="Enter CIN"]');
-      const nameInput = document.querySelector('input[placeholder="First or Last Name"]');
-      const roleSelect = document.getElementById("role");
-      const dobInput = document.getElementById("dob");
-      const membershipStatusSelect = document.getElementById("membershipStatus");
+    <!-- START CIN SEARCH -->
+    <div class="row my-2">
+      <p class="fs-5">CIN</p>
+      <input type="search" class="form-control form-control-dark" placeholder="Enter CIN" aria-label="Search">
+    </div>
+    <!-- END CIN SEARCH -->
 
+    <!-- START NAME SEARCH -->
+    <div class="row my-2">
+      <p class="fs-5">Name</p>
+      <input type="search" class="form-control form-control-dark" placeholder="First or Last Name" aria-label="Search">
+    </div>
+    <!-- END NAME SEARCH -->
 
-      // Get the table rows that contain user data
-      const tableRows = document.querySelectorAll("tbody tr");
+    <!-- START ROLE FILTER -->
+    <div class="row my-2">
+      <p class="fs-5">Role</p>
+      <select class="form-control" name="role" id="role">
+        <option value="">Select a Role</option>
+        <option value="librarian">Librarian</option>
+        <option value="reader">Reader</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    <!-- END ROLE FILTER -->
 
-      // Function to filter the users based on search criteria
-      function filterUsers() {
-        const matriculeValue = matriculeInput.value.toLowerCase();
-        const cinValue = cinInput.value.toLowerCase();
-        const nameValue = nameInput.value.toLowerCase();
-        const roleValue = roleSelect.value.toLowerCase();
-        const dobValue = dobInput.value;
-        const membershipStatusValue = membershipStatusSelect.value.toLowerCase();
+    <!-- START DATE OF BIRTH FILTER -->
+    <div class="row my-2">
+      <p class="fs-5">Date of Birth</p>
+      <input type="date" class="form-control form-control-dark" name="dob" id="dob">
+    </div>
+    <!-- END DATE OF BIRTH FILTER -->
 
-        tableRows.forEach(row => {
-          const matricule = row.cells[0].textContent.toLowerCase();
-          const cin = row.cells[2].textContent.toLowerCase();
-          const firstName = row.cells[3].textContent.toLowerCase();
-          const lastName = row.cells[4].textContent.toLowerCase();
-          const role = row.cells[5].textContent.toLowerCase();
-          const dob = row.cells[6].textContent;
-          const status = row.cells[7].textContent.toLowerCase();
-
-          const matchMatricule = matricule.includes(matriculeValue);
-          const matchCIN = cin.includes(cinValue);
-          const matchName = firstName.includes(nameValue) || lastName.includes(nameValue);
-          const matchRole = roleValue === "" || role.includes(roleValue);
-          const matchDOB = dobValue === "" || dob === dobValue;
-          const matchStatus = membershipStatusValue === "" || status === membershipStatusValue;
-
-          if (matchMatricule && matchCIN && matchName && matchRole && matchDOB && matchStatus) {
-            row.style.display = "";
-          } else {
-            row.style.display = "none";
-          }
-        });
-      }
+    <!-- START MEMBERSHIP STATUS FILTER -->
+    <div class="row my-2">
+      <p class="fs-5">Membership Status</p>
+      <select class="form-control" name="membershipStatus" id="membershipStatus">
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="suspended">Suspended</option>
+      </select>
+    </div>
+    <!-- END MEMBERSHIP STATUS FILTER -->
 
 
-      // Add event listeners to trigger the filter function when input changes
-      matriculeInput.addEventListener("input", filterUsers); // Matricule search filter
-      cinInput.addEventListener("input", filterUsers); // CIN search filter
-      nameInput.addEventListener("input", filterUsers); // Name search filter (First or Last Name)
-      roleSelect.addEventListener("change", filterUsers); // Role search filter
-      dobInput.addEventListener("input", filterUsers); // Date of Birth search filter
-      membershipStatusSelect.addEventListener("change", filterUsers);
+  </div>
+  <!-- END SEARCH BAR SECTION -->
 
-    });
 
-  </script>
+  <!-- START TABLE OF USERS -->
+  <div class="col m-2">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Matricule</th>
+          <th>Photo</th>
+          <th>CIN</th>
+          <th>First Name</th>
+          <th>Last name</th>
+          <th>Phone Number</th>
+          <th>Role</th>
+          <th>DOB</th>
+          <th>Membership Status</th>
+          <th>Edit</th>
 
-  {% endblock %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{user.id}}</td>
+          <td><img src="user1.jpg" alt="User 1" class="img-thumbnail" width="50"></td>
+          <td>{{user.cin}}</td>
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.dob}}</td>
+          <td>{{user.role}}</td>
+          <td>{{user.status}}</td>
+          <td><a href="#" class="btn bg-brown"><i class="bi bi-pencil text-light"></i></a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+
+
+    </table>
+  </div>
+  <!-- END TABLE OF USERS -->
+</div>
+<!-- END DISPLAY USERS -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get input fields for Matricule, CIN, Name, Role, and Date of Birth
+    const matriculeInput = document.querySelector('input[placeholder="Enter Matricule"]');
+    const cinInput = document.querySelector('input[placeholder="Enter CIN"]');
+    const nameInput = document.querySelector('input[placeholder="First or Last Name"]');
+    const roleSelect = document.getElementById("role");
+    const dobInput = document.getElementById("dob");
+    const membershipStatusSelect = document.getElementById("membershipStatus");
+
+
+    // Get the table rows that contain user data
+    const tableRows = document.querySelectorAll("tbody tr");
+
+    // Function to filter the users based on search criteria
+    function filterUsers() {
+      const matriculeValue = matriculeInput.value.toLowerCase();
+      const cinValue = cinInput.value.toLowerCase();
+      const nameValue = nameInput.value.toLowerCase();
+      const roleValue = roleSelect.value.toLowerCase();
+      const dobValue = dobInput.value;
+      const membershipStatusValue = membershipStatusSelect.value.toLowerCase();
+
+      tableRows.forEach(row => {
+        const matricule = row.cells[0].textContent.toLowerCase();
+        const cin = row.cells[2].textContent.toLowerCase();
+        const firstName = row.cells[3].textContent.toLowerCase();
+        const lastName = row.cells[4].textContent.toLowerCase();
+        const role = row.cells[5].textContent.toLowerCase();
+        const dob = row.cells[6].textContent;
+        const status = row.cells[7].textContent.toLowerCase();
+
+        const matchMatricule = matricule.includes(matriculeValue);
+        const matchCIN = cin.includes(cinValue);
+        const matchName = firstName.includes(nameValue) || lastName.includes(nameValue);
+        const matchRole = roleValue === "" || role.includes(roleValue);
+        const matchDOB = dobValue === "" || dob === dobValue;
+        const matchStatus = membershipStatusValue === "" || status === membershipStatusValue;
+
+        if (matchMatricule && matchCIN && matchName && matchRole && matchDOB && matchStatus) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+
+
+    // Add event listeners to trigger the filter function when input changes
+    matriculeInput.addEventListener("input", filterUsers); // Matricule search filter
+    cinInput.addEventListener("input", filterUsers); // CIN search filter
+    nameInput.addEventListener("input", filterUsers); // Name search filter (First or Last Name)
+    roleSelect.addEventListener("change", filterUsers); // Role search filter
+    dobInput.addEventListener("input", filterUsers); // Date of Birth search filter
+    membershipStatusSelect.addEventListener("change", filterUsers);
+
+  });
+
+</script>
+{% endblock %}

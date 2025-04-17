@@ -55,7 +55,10 @@
             {{ form.password2 }}
             <div class="form-text text-danger d-none" id="passwordMismatch">Passwords do not match.</div>
           </div>
-
+          <div class="mb-3">
+            <label class="form-label">status *</label>
+            {{ form.status }}
+          </div>
           <div class="mb-3">
             <label class="form-label">Phone Number</label>
             {{ form.phone_number }}
@@ -100,10 +103,10 @@
 
           <button type="submit" class="btn btn-green text-light">Register</button>
           {% if form.errors %}
-  <div class="alert alert-danger">
-    {{ form.errors }}
-  </div>
-{% endif %}
+          <div class="alert alert-danger">
+            {{ form.errors }}
+          </div>
+          {% endif %}
         </form>
       </div>
     </div>

@@ -26,4 +26,6 @@ urlpatterns = [
     path('book_list', include('gardenBookApp.urls')),
     path('book_edit', include('gardenBookApp.urls')),
     path('addbook', include('gardenBookApp.urls')),
+       path('create-user', include('gardenBookApp.urls')),
+       
 ]

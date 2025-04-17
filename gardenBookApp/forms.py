@@ -1,6 +1,9 @@
 from django import forms
 from .models import Livre,User
 from django.contrib.auth.forms import UserCreationForm
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
+
 class LivreForm(forms.ModelForm):
     class Meta:
         model = Livre
@@ -45,5 +48,11 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = [
             'username', 'email', 'password1', 'password2', 'cin',
-            'phone_number', 'dob', 'role', 'address', 'city', 'postal_code', 'country'
+            'phone_number', 'dob', 'role', 'address', 'city', 'postal_code', 'country', 'status'
         ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'POST'
+        self.helper.add_input(Submit('submit', 'Create User'))

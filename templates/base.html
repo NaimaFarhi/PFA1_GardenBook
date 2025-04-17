@@ -13,7 +13,7 @@
 <body>
   <!-- START NAVIGATION BAR -->
   <header class="m-4 text-white">
-    <div class="container-fluid p-3 bg-green" style="border-radius: 40px;">
+    <div class="container-fluid bg-green" style="border-radius: 40px;">
       <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
         <a href="home&.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <img src="{% static 'assets/brand/_logo-nobg.png' %}" class="bi me-2" width="80" height="80" role="img"
@@ -21,7 +21,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="home.html" class="nav-link px-3 text-white fs-5"><i
+          <li class="nav-item"><a href="{% url 'home' %}" class="nav-link px-3 text-white fs-5"><i
                 class="bi bi-house-door mx-2"></i>Home</a></li>
           <li class="nav-item"><a href="dashboard.html" class="nav-link px-3 text-white fs-5"><i
                 class="bi bi-clipboard2-data mx-2"></i>Dashboard</a>
@@ -40,21 +40,23 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fs-5 text-light" href="users.html" id="dropdown10"
+            <a class="nav-link dropdown-toggle fs-5 text-light" href="{% url 'users-list' %}" id="dropdown10"
               data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-half mx-2"></i>Users</a>
             <ul class="dropdown-menu" style="background: #ececec;" aria-labelledby="dropdown10">
-              <li><a class="dropdown-item" href="users.html">All Users</a></li>
-              <li><a class="dropdown-item" href="addUser.html">Add a User</a></li>
+              <li><a class="dropdown-item" href="{% url 'users-list' %}">All Users</a></li>
+              <li><a class="dropdown-item" href="{% url 'create-user' %}">Add a User</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="settings.html" class="nav-link px-3 text-white fs-5"><i
                 class="bi bi-gear mx-2"></i>Settings</a></li>
         </ul>
-
+        {% if user.is_authenticated %}
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-brown text-light">Sign-up</button>
+          <button type="button" class="btn btn-outline-light me-2">
+            <a href="{% url 'logout' %}">Logout</a></button>
+
         </div>
+        {% endif %}
       </div>
     </div>
   </header>
@@ -103,7 +105,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 
